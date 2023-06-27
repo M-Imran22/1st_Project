@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+
 
     <title>Home</title>
 </head>
-
-<body>

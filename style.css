@@ -5,10 +5,7 @@
     font-family: "poppins", sans-serif;
 }
 
-body {
-    color: lightcyan;
 
-}
 
 header {
     z-index: 999;
@@ -19,48 +16,69 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 200px;
+    padding: 20px 100px;
     transition: 0.5s ease;
-    background-attachment: fixed;
+    /* background-color: red; */
+    /* background-attachment: fixed; */
 }
 
 header .brand {
-    color: #fff;
+    color: #fff !important;
     font-size: 1.5em;
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
-}
-
-.navigation {
-    position: relative;
-    background-attachment: fixed;
-    background-color: #1680AC;
+    user-select: none;
 }
 
 .navigation-items a {
     position: relative;
     font-size: 1em;
-    color: #fff;
+    color: white !important;
     text-decoration: none;
     font-weight: 500;
     margin-left: 30px;
-    transition: 0.3s ease;
+    /* transition: 0.3s ease; */
 
 }
 
-.navigation-items a::before {
+.navigation-items a::after {
     content: '';
     position: absolute;
     background: #fff;
     height: 3px;
-    bottom: 0;
+    bottom: -6px;
     left: 0;
-    transition: 0.3s ease;
+    width: 100%;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scale(0);
+    transition: transform.5s;
 }
 
-.navigation-items a:hover::before {
-    width: 100%;
+.navigation-items a:hover::after {
+    transform-origin: left;
+    transform: scale(1);
+}
+
+.navigation-items .btnlogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation-items .btnlogin-popup:hover {
+    background: #fff;
+    color: skyblue;
 }
 
 
@@ -72,7 +90,7 @@ header .brand {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /* background: #2696E9; */
+    /* background: #03464e; */
     padding: 100px 200px;
 
 }
@@ -192,7 +210,7 @@ header .brand {
 }
 
 .slider-navigation .nav-btn.active {
-    background: #2696E9;
+    background: #03464e;
 }
 
 .cardSliderArea {
@@ -202,7 +220,7 @@ header .brand {
     width: 100%;
     height: 900px;
     /* background-attachment: scroll; */
-    background-image: url(/Pic/Australia-Pink-Lake.jpg);
+    background-image: url(/Pic/Cinque-Terre-Italy.jpg);
     background-blend-mode: darken;
     background-color: #cccccc;
     background-position: center;
@@ -245,7 +263,7 @@ header .brand {
 }
 
 .contanir .carousel-control-next {
-    right: -60px;
+    right: -135px;
     top: 255px;
 }
 
@@ -255,7 +273,7 @@ header .brand {
 }
 
 .contanir .m-4 {
-    margin: 20px 8px 20px 8px !important;
+    margin: 20px -76px 20px 8px !important;
 }
 
 .contanir .row {
@@ -398,7 +416,145 @@ header .brand {
     color: #aaa;
 }
 
+.login_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./Pic/peakpx.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
+
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid #03464e;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(10, 99, 158, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .error {
+    padding-top: 20px;
+    margin-left: 28px;
+    color: red;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #03464e;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #03464e;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: #03464e;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #03464e;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #03464e;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.login .btn {
+    width: 100%;
+    height: 45px;
+    background: #03464e;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.login .btn:hover {
+    /* font-size: 1em; */
+    font-weight: 700;
+    background: #2c9ead;
+    color: #03464e;
+}
+
+.login-register {
+    font-size: .9em;
+    color: #03464e;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: #03464e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
 
 @media (max-width: 1040px) {
     header {
