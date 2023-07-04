@@ -1,9 +1,9 @@
 <?php
 require_once("header.php");
-?>
-<?php
 session_start();
+
 ?>
+
 
 <body class="login_body">
     <div class="wrapper" style="height: 520px;">

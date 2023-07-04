@@ -11,8 +11,7 @@ require_once("header.php");
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Contact</a>
-            <a href="#">Signup</a>
-            <button class="btnlogin-popup">Login</button>
+            <a href="http://127.0.0.1/Project/login.php" class="btnlogin-popup">Signup/Login</a>
         </div>
     </header>
 

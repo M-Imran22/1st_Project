@@ -1,153 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+require_once("header.php");
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
-    <style>
-        .profile-picture {
-            left: 150px;
-            /* margin-bottom: 0px; */
-            /* bottom: 1px; */
-            position: absolute;
-            top: 185px;
-            z-index: 2;
-        }
-
-        .profile-picture img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            width: 220px;
-            height: 220px;
-        }
-
-        .cover-photo {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            max-height: 300px;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .cover-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.7);
-        }
-
-        .introduction {
-            left: 420px;
-            top: 300px;
-            position: absolute;
-        }
-    </style>
-
-
-</head>
-
-<body>
+<body class="profile-body">
     <header>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-3">
-                    <div class="profile-picture">
-                        <img src="./Pic/Cinque-Terre-Italy.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+        <a href="#" class="brand">Logo</a>
+        <div class="navigation"></div>
+        <div class="navigation-items">
+            <a href="#" class=" ">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button class="btnlogin-popup">Signup/Login</button>
+        </div>
+    </header>
+    <div class="container-xxl">
+        <div class="profile">
+            <div class="profile-header">
+                <div class="profile-header-content">
+                    <div class="profile-cover-img">
+                        <img src="./Pic/Cinque-Terre-Italy.jpg" alt="">
+                    </div>
+                    <div class="profile-header-img">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                    </div>
+                    <div class="profile-header-info">
+                        <h4>Sean Ngu</h4>
+                        <p>Pakistan</p>
+                        <a href="#" class="btn btn-info">Edit Profile</a>
                     </div>
                 </div>
-                <div class="col-md-9">
-                    <div class="cover-photo">
-                        <img src="./Pic//Ha-Long-Bay-Vietnam.jpg" alt="Cover Photo" class="img-fluid">
-                    </div>
-                    <div class="introduction mt-3">
-                        <h1 class="display-4">John Doe</h1>
-                        <p class="lead">Travel Blogger | Adventure Enthusiast</p>
-                    </div>
-                </div>
+                <ul class="profile-header-tab">
+                    <li><a href="#">POSTS</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">PHOTOS</a></li>
+                    <li><a href="#">VIDEOS</a></li>
+                    <li class="active"><a href="#">FRIENDS</a></li>
+                </ul>
             </div>
         </div>
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+        <div class="profile-content">
+            <!-- begin tab-content -->
+            <div class="tab-content p-0">
+                <!-- begin #profile-post tab -->
+                <div class="tab-pane fade active show" id="profile-post">
+                    <!-- begin timeline -->
+                    <ul class="timeline">
+                        <li>
+                            <!-- begin timeline-time -->
+                            <div class="timeline-time">
+                                <span class="date">today</span>
+                                <span class="time">04:20</span>
+                            </div>
+                            <!-- end timeline-time -->
+                            <!-- begin timeline-icon -->
+                            <div class="timeline-icon">
+                                <a href="javascript:;">&nbsp;</a>
+                            </div>
+                            <!-- end timeline-icon -->
+                            <!-- begin timeline-body -->
+                            <div class="timeline-body">
+                                <div class="timeline-header">
+                                    <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></span>
+                                    <span class="username"><a href="javascript:;">Sean Ngu</a> <small></small></span>
+                                    <span class="pull-right text-muted">18 Views</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus turpis quis tincidunt luctus.
+                                        Nam sagittis dui in nunc consequat, in imperdiet nunc sagittis.
+                                    </p>
+                                </div>
+                                <div class="timeline-likes">
+                                    <div class="stats-right">
+                                        <span class="stats-text">259 Shares</span>
+                                        <span class="stats-text">21 Comments</span>
+                                    </div>
+                                    <div class="stats">
+                                        <span class="fa-stack fa-fw stats-icon">
+                                            <i class="fa fa-circle fa-stack-2x text-danger"></i>
+                                            <i class="fa fa-heart fa-stack-1x fa-inverse t-plus-1"></i>
+                                        </span>
+                                        <span class="fa-stack fa-fw stats-icon">
+                                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                            <i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                        <span class="stats-total">4.3k</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-footer">
+                                    <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                                    <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                                    <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                                </div>
+                                <div class="timeline-comment-box">
+                                    <div class="user"><img src="https://bootdey.com/img/Content/avatar/avatar3.png"></div>
+                                    <div class="input">
+                                        <form action="">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control rounded-corner" placeholder="Write a comment...">
+                                                <span class="input-group-btn p-l-10">
+                                                    <button class="btn btn-primary f-s-12 rounded-corner" type="button">Comment</button>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end timeline-body -->
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
+                        <li>
+                            <!-- begin timeline-time -->
+                            <div class="timeline-time">
+                                <span class="date">yesterday</span>
+                                <span class="time">20:17</span>
+                            </div>
+                            <!-- end timeline-time -->
+                            <!-- begin timeline-icon -->
+                            <div class="timeline-icon">
+                                <a href="javascript:;">&nbsp;</a>
+                            </div>
+                            <!-- end timeline-icon -->
+                            <!-- begin timeline-body -->
+                            <div class="timeline-body">
+                                <div class="timeline-header">
+                                    <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></span>
+                                    <span class="username">Sean Ngu</span>
+                                    <span class="pull-right text-muted">82 Views</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <p>Location: United States</p>
+                                </div>
+                                <div class="timeline-footer">
+                                    <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                                    <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                                    <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                                </div>
+                            </div>
+                            <!-- end timeline-body -->
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                        <li>
+                            <!-- begin timeline-time -->
+                            <div class="timeline-time">
+                                <span class="date">24 February 2014</span>
+                                <span class="time">08:17</span>
+                            </div>
+                            <!-- end timeline-time -->
+                            <!-- begin timeline-icon -->
+                            <div class="timeline-icon">
+                                <a href="javascript:;">&nbsp;</a>
+                            </div>
+                            <!-- end timeline-icon -->
+                            <!-- begin timeline-body -->
+                            <div class="timeline-body">
+                                <div class="timeline-header">
+                                    <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></span>
+                                    <span class="username">Sean Ngu</span>
+                                    <span class="pull-right text-muted">1,282 Views</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <p class="lead">
+                                        <i class="fa fa-quote-left fa-fw pull-left"></i>
+                                        Quisque sed varius nisl. Nulla facilisi. Phasellus consequat sapien sit amet nibh molestie placerat. Donec nulla quam, ullamcorper ut velit vitae, lobortis condimentum magna. Suspendisse mollis in sem vel mollis.
+                                        <i class="fa fa-quote-right fa-fw pull-right"></i>
+                                    </p>
+                                </div>
+                                <div class="timeline-footer">
+                                    <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                                    <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                                    <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                                </div>
+                            </div>
+                            <!-- end timeline-body -->
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                        <li>
+                            <!-- begin timeline-time -->
+                            <div class="timeline-time">
+                                <span class="date">10 January 2014</span>
+                                <span class="time">20:43</span>
+                            </div>
+                            <!-- end timeline-time -->
+                            <!-- begin timeline-icon -->
+                            <div class="timeline-icon">
+                                <a href="javascript:;">&nbsp;</a>
+                            </div>
+                            <!-- end timeline-icon -->
+                            <!-- begin timeline-body -->
+                            <div class="timeline-body">
+                                <div class="timeline-header">
+                                    <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></span>
+                                    <span class="username">Sean Ngu</span>
+                                    <span class="pull-right text-muted">1,021,282 Views</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4 class="template-title">
+                                        <i class="fa fa-map-marker text-danger fa-fw"></i>
+                                        795 Folsom Ave, Suite 600 San Francisco, CA 94107
+                                    </h4>
+                                    <p>In hac habitasse platea dictumst. Pellentesque bibendum id sem nec faucibus. Maecenas molestie, augue vel accumsan rutrum, massa mi rutrum odio, id luctus mauris nibh ut leo.</p>
+                                    <p class="m-t-20">
+                                        <img src="../assets/img/gallery/gallery-5.jpg" alt="">
+                                    </p>
+                                </div>
+                                <div class="timeline-footer">
+                                    <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                                    <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                                    <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                                </div>
+                            </div>
+                            <!-- end timeline-body -->
+                        </li>
+                        <li>
+                            <!-- begin timeline-icon -->
+                            <div class="timeline-icon">
+                                <a href="javascript:;">&nbsp;</a>
+                            </div>
+                            <!-- end timeline-icon -->
+                            <!-- begin timeline-body -->
+                            <div class="timeline-body">
+                                Loading...
+                            </div>
+                            <!-- begin timeline-body -->
                         </li>
                     </ul>
+                    <!-- end timeline -->
                 </div>
+                <!-- end #profile-post tab -->
             </div>
-        </nav> -->
-    </header>
-
-
-
-
-    <section class="profile-info">
-        <!-- Personal Information -->
-        <!-- Display user's name, location, website, social media links, and bio -->
-    </section>
-
-    <section class="blog-posts">
-        <!-- Blog Posts -->
-        <!-- Display user's blog posts in a grid or list format -->
-        <!-- Include blog post title, featured image, publication date, and excerpt -->
-    </section>
-
-    <section class="travel-map">
-        <!-- Travel Map -->
-        <!-- Show an interactive map with visited locations -->
-        <!-- Make the locations clickable to view related blog posts -->
-    </section>
-
-    <section class="categories-tags">
-        <!-- Categories and Tags -->
-        <!-- Display the categories or topics the user writes about -->
-    </section>
-
-    <section class="social-engagement">
-        <!-- Social Engagement -->
-        <!-- Add social sharing buttons, like and comment features -->
-    </section>
-
-    <section class="followers-following">
-        <!-- Followers and Following -->
-        <!-- Show the number of followers and users the blogger is following -->
-    </section>
-
-    <section class="contact">
-        <!-- Contact Information -->
-        <!-- Provide a contact form or email address for inquiries -->
-    </section>
-
-    <section class="recent-activity">
-        <!-- Recent Activity -->
-        <!-- Highlight the user's recent activity, such as latest blog post, comments received, etc. -->
-    </section>
-
-    <footer>
-        <!-- Footer section -->
-        <!-- Include links to other pages, copyright information, etc. -->
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+            <!-- end tab-content -->
+        </div>
+    </div>
+    <?php
+    require_once("footer.php");
+    ?>
